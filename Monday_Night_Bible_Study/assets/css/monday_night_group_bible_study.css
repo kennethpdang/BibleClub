@@ -1,0 +1,1169 @@
+/* CHANGING SCROLLBAR */
+::-webkit-scrollbar {
+	width: 8px;
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #555;
+	border-radius: 3px;
+}
+
+/* REMOVING ARROW ON NUMBER BAR FOR CHROME, INTERNET EXPLORER, AND SAFARI */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* REMOVING ARROW ON NUMBER BAR FOR FIREFOX */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* BODY STUFF */
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+	background-color: #0B1114;
+	color: white;
+}
+
+header {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 7%;
+}
+
+/* Header Stuff */
+
+.main_nav_bar {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 3;
+}
+
+.drop-down-menu {
+	float: right;
+}
+
+.drop-down-button {
+	background-color: #0B1114;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+.drop-down-content {
+	display: none;
+	position: absolute;
+	background-color: #0B1114;
+	min-width: 160px;
+	z-index: 3;
+	right: 0px; /* So that the contents of drop down don't go off page. */
+}
+
+.drop-down-content a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.drop-down-content a:hover {
+	transform: scale(1.1);
+}
+
+.drop-down-menu:hover .drop-down-button {
+	color: white;
+	text-shadow: 0 0 10px #ffffff,
+				 0 0 20px #ffffff;
+}
+
+/* Main Stuff */
+
+#loading-welcome {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+
+.element1, .element2, .element3, .element4, .element5, .element6, .element7 {
+	text-shadow:
+		-1px -1px 0 #fff,  
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+	font-size: 300%;
+	font-weight: 500px;
+	color: #0B1114;
+	letter-spacing: 5px;
+	user-select: none; /* Prevents User from Selecting Text */
+	margin: 5px;
+}
+
+#posts {
+	display: flex; /* Can't do Grid Because Post Size Can Increase Depending On Posts Added */
+	flex-wrap: wrap; /* So That All the Elements Won't Be On The Same Row */
+}
+
+.post-background {
+	background-size: cover;
+}
+
+.post {
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	opacity: 0.90;
+	height: 33.33vh;
+}
+
+.post hr {
+	color: black;
+	text-decoration: none;
+}
+
+.post:hover {
+	opacity: 0.30;
+}
+
+.post h2 {
+	margin: 5%;
+	text-align: center;
+}
+
+.post p {
+	text-align: center;
+	color: black; /* So that the <hr> tag becomes black. */
+}
+
+/* Footer Stuff */
+
+footer {
+	color: white;
+	background-color: #10171A;
+	padding: 20px;
+}
+
+footer h5 {
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.join-group {
+	padding: 5px;
+	text-decoration: none;
+	border-radius: 5px;
+	border: 3px solid;
+	color: white;
+	-webkit-animation: JoinGroupAnimation 15s infinite alternate;
+}
+
+/* Animations */
+@-webkit-keyframes JoinGroupAnimation {
+    5% {border-color: #39BF3F;}
+    10% {border-color: #3EC453;}
+    15% {border-color: #42C967;}
+    20% {border-color: #4BD38F;}
+    25% {border-color: #53DCB7;}
+    30% {border-color: #51D8BF;}
+	35% {border-color: #4ED4C6;}
+    40% {border-color: #48CCD4;}
+    45% {border-color: #43C4E3;}
+    50% {border-color: #3DBBF1;}
+    55% {border-color: #3DBBF1;}
+    60% {border-color: #43C4E3;;}
+	65% {border-color: #48CCD4;}
+    70% {border-color: #4ED4C6;}
+    75% {border-color: #51D8BF;}
+    80% {border-color: #53DCB7;}
+    85% {border-color: #4BD38F;}
+    90% {border-color: #42C967;}
+	95% {border-color: #3EC453;}
+	100% {border-color: #39BF3F;}
+}
+
+@-webkit-keyframes LogInTextAnimation {
+    5% {color: #39BF3F;}
+    10% {color: #3EC453;}
+    15% {color: #42C967;}
+    20% {color: #4BD38F;}
+    25% {color: #53DCB7;}
+    30% {color: #51D8BF;}
+	35% {color: #4ED4C6;}
+    40% {color: #48CCD4;}
+    45% {color: #43C4E3;}
+    50% {color: #3DBBF1;}
+    55% {color: #3DBBF1;}
+    60% {color: #43C4E3;}
+	65% {color: #48CCD4;}
+    70% {color: #4ED4C6;}
+    75% {color: #51D8BF;}
+    80% {color: #53DCB7;}
+    85% {color: #4BD38F;}
+    90% {color: #42C967;}
+	95% {color: #3EC453;}
+	100% {color: #39BF3F;}
+}
+
+/* Registration Form Stuff */
+
+.log-in-panel {
+	border: 3px solid #53DCB7;
+	width: 30vw;
+	height:50vh;
+	justify-content: center;
+	color: #43C4E3;
+	border-radius: 15px;
+	justify-items: center;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"blank1 header blank2"
+		"name name name"
+		"password password password"
+		"blank3 submit blank4";
+}
+
+.form__group {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+	width: 80%;
+}
+
+ .form__field {
+	font-family: inherit;
+	width: 100%;
+	border: 0px;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 1.3rem;
+	color: #fff;
+	padding: 7px 0px;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+
+ .form__field::placeholder {
+	color: transparent;
+}
+
+ .form__field:placeholder-shown ~ .form__label {
+	font-size: 1.3rem;
+	cursor: text;
+	top: 20px;
+}
+
+ .form__label {
+	position: absolute;
+	top: 0px;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #9b9b9b;
+}
+
+ .form__field:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #11998e, #38ef7d);
+	border-image-slice: 1;
+}
+
+ .form__field:focus ~ .form__label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #11998e;
+	font-weight: 700;
+}
+
+.login_button {
+	width: 100%;
+	border: 3px solid #9b9b9b;
+	height: 40%;
+	border-radius: 7px;
+	background-color: #0B1114;
+	color: #9b9b9b;
+}
+
+/* Reset Input */
+ .form__field:required, .form__field:invalid {
+	box-shadow: none;
+}
+
+/* Form Areas */
+.formarea1 {
+	grid-area: header;
+}
+
+.formarea2 {
+	grid-area: name;
+}
+
+.formarea3 {
+	grid-area: password;
+}
+
+.formarea4 {
+	grid-area: submit;
+}
+
+.formarea5 {
+	grid-area: blank1;
+	color: #9b9b9b;
+	height: 80%;
+	width: 80%;
+	border-radius: 7px;
+	border: 3px dashed #9b9b9b;
+	padding: 2%;
+	display: flex;
+	align-items: center;
+}
+
+/* Posting Form Stuff */
+.manage_main {
+	display: flex;
+}
+
+#user_controls {
+	width: 20%;
+	border-width: 0px 0px 0px 3px;
+	border-style: solid;
+	border-color: white;
+	overflow-y: auto;
+	/* Height and OffSet From NavBar Will Be Calculated With JQuery */
+}
+
+#form_section {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+}
+
+.write_a_post_form {
+	width: 70%;
+	height: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.form {
+	height: 91%;
+	width: 92%;
+}
+
+.pictureuploadwidth {
+	width: 8%;
+}
+
+.post_header {
+	width: 94%;
+	height: 7%;
+	resize: none;
+	background-color: #0B1114;
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+	border-width: 3px 3px 3px 3px;
+	border-style: solid;
+	border-color: white;
+	font-size: 200%;
+}
+
+.full {
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.post_text {
+	width: 94%;
+	height: 95%;
+	border-radius: 0px 0px 10px 10px;
+	border-width: 0px 3px 3px 3px;
+	border-style: solid;
+	border-color: white;
+	background-color: #0B1114;
+	color: white;
+	resize: none;
+}
+
+.post_header:focus, .post_text:focus {
+	/* USE FOCUS WHEN USER CAN INPUT THINGS */
+	outline: none;
+}
+
+.fileselector {
+	height: 50%;
+	width: 50%;
+	border-radius: 100px !important;
+}
+
+.post_button {
+	border: 3px solid white;
+	background-color: #0B1114;
+	color: white;
+	height: 5%;
+	border-radius: 10px;
+	width: 88%;
+}
+
+.before:hover::after {
+	content: '\00a0 \00a0 \00a0 \00a0 Add for main page!';
+	position: absolute;
+	text-align: center;
+}
+
+.after:hover::after {
+	content: '\00a0 \00a0 \00a0 \00a0 Add for post page!';
+	position: absolute;
+	text-align: center;
+}
+
+.previous_post {
+	border-width: 0px 0px 3px 0px;
+	border-style: solid;
+	border-color: white;
+	padding-left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.previous_post i {
+	font-size: 25px;
+	padding: 10px;
+}
+
+.previous_post i:hover {
+	text-shadow: 0 0 10px #ffffff,
+				 0 0 20px #ffffff;
+}
+
+.previous_post a {
+	text-decoration: none;
+	color: white;
+}
+
+/* BIBLE Content Stuff */
+.bible_main {
+	display: flex;
+}
+
+.bible {
+	padding: 2%;
+}
+
+/* Manage Account */
+.onepagefullmain {
+	height: 100vh;
+}
+
+#manageaccountsection {
+	display: grid;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"welcome welcome info info"
+		"welcome welcome info info"
+		"about about info info"
+		"about about info info"
+		"alerts alerts info info"
+}
+
+.userwelcome {
+	grid-area: welcome;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #1B2023;
+	border-radius: 10px;
+	padding: 2%;
+}
+
+.userwelcome div {
+	padding-left: 10%;
+}
+
+.aboutmeform {
+	grid-area: about;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: 
+		"aboutinfo aboutinfo"
+		"aboutinfo aboutinfo"
+		"dateofbirth msubmit";
+	padding: 5%;
+	background-color: #13191C;
+	height: 65%;
+	width: 80%;
+	border-radius: 10px;
+}
+
+.aboutinfo {
+	grid-area: aboutinfo;
+	display: flex;
+	height: 90%;
+	width: 90%;
+}
+
+.aboutinfo textarea {
+	height: 90%;
+	width: 80%;
+	margin-left: 7%;
+	resize: none;
+	background-color: #0B1114;
+	border-radius: 5px;
+	border: 2px solid white;
+	color: white;
+}
+
+.dateofbirthinfo {
+	grid-area: dateofbirth;
+	display: flex;
+	height: 90%;
+	width: 90%;
+	align-items: center;
+}
+
+.dateofbirthinfo input {
+	margin-left: 10%;
+	height: 30%;
+	color: white;
+	background-color: #0B1114;
+	border: 1px solid white;
+	border-radius: 3px;
+}
+
+.alerts {
+	background-color: #1B2023;
+	border-radius: 10px;
+	grid-area: alerts;
+	width: 80%;
+	text-align: center;
+}
+
+.info {
+	grid-area: info;
+	height: 100%;
+	overflow-y: auto;
+	border-width: 0px 0px 0px 3px;
+	border-color: white;
+	border-style: solid;
+	padding: 0% 5%;
+}
+
+.info h2 {
+	background-color: #54AAEE;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.info a {
+	text-decoration: none;
+	color: yellow;
+}
+
+.image-upload {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#manageaccountsection img {
+	border-radius: 1000px;
+	border: 5px solid white;
+	height: 130px;
+	width: 130px;
+	cursor: grab;
+}
+
+.save_changes_center {
+	grid-area: msubmit;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+}
+
+.save_changes {
+	height: 50%;
+	border-radius: 30px;
+	background-color: #0077FF;
+	color: white;
+	width: 70%;
+	border: 2px solid #0077FF;
+}
+
+.save_changes:hover {
+	filter: brightness(1.2);
+}
+
+.image-upload>input {
+	display: none;
+}
+
+.output {
+	text-align: center;
+	padding: 0px !important;
+}
+
+.weatherWidget {
+	width: 250px;
+	display: inline-block;
+}
+
+/* ABOUT US */
+.aboutgroup {
+	padding: 2% 2% 0% 2%;
+}
+
+.aboutgroup h1 {
+	background-color: #FD4618;
+	padding: 0.5%;
+	width: 20%;
+	text-align: center;
+}
+
+.aboutussection {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0% 2% 2% 2%;
+}
+
+.aboutussection h1 {
+	background-color: #FD4618;
+	padding: 0.5%;
+	width: 20%;
+	text-align: center;
+}
+
+.aboutussection img {
+	border-radius: 1000px;
+	border: 5px solid white;
+	height: 150px;
+	width: 150px;
+}
+
+.userabout {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.userabout div {
+	margin-left: 5%;
+}
+
+/* POSTS */
+.post_section {
+	height: 100vh;
+	display: inline-block; /* PUSHES FOOTER TO BOTTOM! */
+	padding-left: 2%;
+	padding-right: 2%;
+	margin-top: 50px;
+}
+
+.article_info {
+	background-size: cover;
+	width: 375px;
+	height: 375px;
+	border-radius: 10px;
+	float: left; /* THIS WAY TEXT WRAPS AROUND!*/
+	margin: 10px 20px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.floattobottom {
+	height: 27%;
+	background-color: gray;
+	margin-bottom: 5%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.infopanel {
+	width: 100%;
+	display: flex;
+	height: 95%;
+}
+
+.titlepost {
+	margin: 0px;
+}
+
+.postinfo {
+	height: 100%;
+}
+
+.postinfo p {
+	margin: 2px;
+}
+
+.postinfoimage {
+	border-radius: 300px;
+	border: 2px solid white;
+	margin-left: 6%;
+}
+
+/* Admin Panel */
+.admin-grid {
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"adminpanel adminpanel adminpanel adminpanel analytics empty"
+		"currentusers currentusers currentusers adduser information information"
+		"currentusers currentusers currentusers adduser information information"
+		"currentusers currentusers currentusers deleteuser information information"
+		"currentusers currentusers currentusers pushalert information information";
+}
+
+.welcome-admin {
+	grid-area: adminpanel;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: #2f363e;
+	margin: 15px;
+	border-radius: 15px;
+}
+
+.admin-overview {
+	grid-area: analytics;
+	background-color: #1B2023;
+	border-radius: 20px;
+	margin: 15px;
+	padding-left: 10px;
+}
+
+.users {
+	grid-area: currentusers;
+	background-color: #1B2023;
+	margin: 15px;
+	padding: 6px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.users h3 {
+	color: #FCAE73;
+}
+
+.information_For_Admin_Widget {
+	grid-area: information;
+	background-color: #1B2023;
+	border-radius: 15px;
+	margin: 15px;
+	padding: 10px;
+	color: white;
+	overflow-y: auto;
+}
+
+.information_For_Admin_Widget h2 {
+	background-color: #54AAEE;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.information_For_Admin_Widget a {
+	text-decoration: none;
+	color: #63E5FF;
+}
+
+.add_user {
+	grid-area: adduser;
+	margin: 15px;
+	background-color: #2f363e;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.add_user h3 {
+	margin: 5px;
+	color: #FCAE73;
+}
+
+.add_user input[type = "text"], .add_user input[type = "password"] {
+	background-color: #2f363e;
+	border: none;
+	color: white;
+	text-align: center;
+}
+
+.add_user input[type = "text"]:focus, .add_user input[type = "password"]:focus {
+	outline: none;
+}
+
+.delete_user {
+	grid-area: deleteuser;
+	margin: 15px;
+	background-color: #2f363e;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 3%;
+	align-items: center;
+}
+
+.delete_user h3 {
+	color: #FCAE73;
+}
+
+.push_alert {
+	grid-area: pushalert;
+	margin: 15px;
+	background-color: #2f363e;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+.admin-profile-picture {
+	height: 170px;
+	width: 170px;
+	border-radius: 1000px;
+	border: 2px solid white;
+}
+
+.column-of-welcome-admin {
+	margin-left: 15px;
+}
+
+.user-profile-picture {
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+}
+
+.a_current_user {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-row: 1;
+	grid-template-areas: "picture name numpost userid";
+}
+
+.userIDEnter {
+	width: 30px;
+	height: 17px;
+	background-color: #2f363e;
+	border: 1.5px solid white;
+	border-radius: 5px;
+	color: white;
+}
+
+.userIDEnter:focus {
+	outline: none;
+}
+
+.organizeLegendandField {
+	display: grid;
+	grid-template-columns: 80% 20%;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"labelfordeleteIDfield deleteIDfield"
+		"labelforremoveallpostcheckbox removeallpostcheckbox"
+}
+
+.deleteIDLabel {
+	grid-area: labelfordeleteIDfield;
+}
+
+.userIDEnter {
+	grid-area: deleteIDfield;
+}
+
+.deleteAllPostsLabel {
+	grid-area: labelforremoveallpostcheckbox;
+}
+
+.deleteAllPostsCheckbox {
+	grid-area: removeallpostcheckbox;
+}
+
+.push_alert h3 {
+	margin: 10px;
+	color: #FCAE73;
+}
+
+.push_alert input[type = "submit"] {
+	margin-top: 10px;
+}
+
+.push_alert input[type = "text"] {
+	background-color: #2f363e;
+	border: none;
+	color: white;
+}
+
+.push_alert input[type = "text"]:focus {
+	outline: none;
+}
+
+.admin-grid input[type = "submit"] { /* Style All The Submit Buttons in Admin Grid */
+	background-color: #fce043;
+	background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+	padding: 5px;
+	border-radius: 40px;
+	border: none;
+}
+
+.admin-grid input[type = "submit"]:hover {
+	filter: brightness(1.20);
+}
+
+/* Text Editor */
+.edit_post_main {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+}
+
+.edit_post_main form {
+	height: 70%;
+}
+
+.update_post_title {
+	width: 100%;
+	height: 7%;
+	resize: none;
+	background-color: #0B1114;
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+	border-width: 3px 3px 3px 3px;
+	border-style: solid;
+	border-color: white;
+	font-size: 200%;
+	box-sizing: border-box; /* NOT SET ABOVE, AND THAT'S WHY IT LOOKS AWKWARD */
+}
+
+.update_post_body {
+	width: 100%;
+	height: 95%;
+	border-radius: 0px 0px 10px 10px;
+	border-width: 0px 3px 3px 3px;
+	border-style: solid;
+	border-color: white;
+	background-color: #0B1114;
+	color: white;
+	resize: none;
+	box-sizing: border-box; /* NOT SET ABOVE, AND THAT'S WHY IT LOOKS AWKWARD */
+}
+
+.update_post_body:focus, .update_post_title:focus {
+	outline: none;
+}
+
+.update_post_button {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #B1F2FF;
+}
+
+.update_post_button:hover {
+	filter: brightness(1.1);
+}
+
+/* WE DO MAX-WIDTH SINCE STYLE CHANGES AS DESIGN GETS SMALLER, WE WORK DESKTOP DOWN, NOT VICE VERSA */
+/* USE MIN-WIDTH WHEN GOING MOBILE TO DESKTOP */
+@media screen and (max-width: 500px) {
+	/* THIS MIGHT AFFECT ALL PAGES */
+	.main_nav_bar {
+		background-color: #0B1114;
+	}
+	
+	.drop-down-button {
+		padding: 15px;
+		font-size: 40px;
+	}
+	
+	.drop-down-content {
+		width: 100vw;
+	}
+	
+	.drop-down-content a {
+		text-align: center;
+		font-size: 200%;
+	}
+	
+	.post-background {
+		width: 100vw !important;
+	}
+	
+	/* MANAGE POSTS */
+	.manage_main {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+	
+	/* MANAGE ACCOUNT */
+	#manageaccountsection {
+		display: block;
+	}
+	
+	.userwelcome {
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		margin: 75px auto 5px auto;
+		text-align: center;
+	}
+	
+	.userwelcome div {
+		padding-left: 0px;
+	}
+	
+	.aboutmeform {
+		padding: 3%;
+		width: 85%;
+		margin: 15px auto 15px auto;
+	}
+	
+	.aboutinfo {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.save_changes {
+		width: 100%;
+	}
+	
+	.alerts {
+		margin: auto;
+	}
+	
+	.info {
+		margin-top: 0px !important; /* Override JS */
+		border-width: 3px 0px 0px 0px;
+		height: auto !important; /* Override JS */
+	}
+	
+	/* LOGIN FORM */
+	.changesize {
+		width: 80%;
+	}
+	
+	.log-in-panel {
+		width: 100%;
+		grid-template-areas:
+			"header header header"
+			"name name name"
+			"password password password"
+			"blank3 submit blank4";
+	}
+	
+	.login_button {
+		height: 60%;
+	}
+	
+	/* ABOUT US */
+	.userabout {
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+	
+	.aboutussection h1 {
+		width: 70%;
+		padding: 15px;
+	}
+	
+	.aboutgroup h1 {
+		width: 70%;
+		padding: 15px;
+	}
+	
+	/* POST CONTENT */
+	.article_info {
+		margin: auto;
+		width: 100%;
+	}
+	
+	.post_section {
+		width: 96%;
+	}
+	
+	.postinfoimage {
+		width: 46px;
+		height: 46px;
+	}
+
+	/* ADMIN PANEL */	
+	.admin-grid {
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		height: calc(100vh - 80px);
+	}
+	
+	.admin_footer { /* HIDES FOOTER ON SMALL DEVICES */
+		display: none;
+	}
+	
+	.add_user {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+	
+	.delete_user {
+		padding-bottom: 30px;
+		padding-top: 15px;
+	}
+	
+	.push_alert {
+		padding-bottom: 30px;
+		padding-top: 30px;
+		margin-bottom: 30px !important;
+	}
+	
+	.admin_panel_header {
+		height: 75px;
+	}
+	
+	.welcome-admin {
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.information_For_Admin_Widget {
+		display: none;
+	}
+}
